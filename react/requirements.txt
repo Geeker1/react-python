@@ -1,0 +1,14 @@
+asn1crypto==0.24.0
+cffi==1.11.5
+cryptography==2.4.1
+Django==2.1.2
+django-cors-headers==2.4.0
+django-rest-knox==3.4.0
+djangorestframework==3.9.0
+djangorestframework-jwt==1.11.0
+idna==2.7
+pycparser==2.19
+PyJWT==1.6.4
+pyOpenSSL==18.0.0
+pytz==2018.6
+six==1.11.0
