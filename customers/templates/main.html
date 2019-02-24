@@ -1,0 +1,43 @@
+{% load course %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<body>
+    <p>Hello!!!</p>
+    <p>{{ main.name }}</p>
+    {% for x in main.coder.all %}
+    {% with item=x.content_object %}
+    <p>{{ item }}<span class="ml-5">{{ item|model_name }}</span></p>
+    {% endwith %}
+    {% endfor %}
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <a href="{% url 'create' main.id 'text' %}" class="text-center">Text</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <a href="{% url 'create' main.id 'file' %}" class="text-center">File</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <a href="{% url 'create' main.id 'video' %}" class="text-center">Video</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <a href="{% url 'create' main.id 'image' %}" class="text-center">Image</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

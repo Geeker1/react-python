@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+	<div class="container bg-dark">
+		<div class="row bg-white text-dark">
+			<form method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+			{{ form }}
+			<button type="submit" class="btn btn-danger">
+				Submit
+			</button>
+		</form>
+		</div>
+	</div>
+</body>
+</html>

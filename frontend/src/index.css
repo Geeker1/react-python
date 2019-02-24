@@ -1,0 +1,97 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+@import url("https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet")
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* li{
+  font-weight: bolder;
+  font-family: 'Tangerine', serif;
+}*/
+
+.badge:hover{
+  cursor: pointer;
+  background-color: black !important;
+}
+
+.carous{
+  object-position: center;
+  object-fit: cover;
+}
+
+body{
+  background-color: #F4F4F4FF !important;
+}
+  .prof-img{
+    height: 75px;width: 75px;
+  }
+
+  .left-navigation{
+    margin-top: 3rem;
+  }
+
+  .left-navigation .left-nav{
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #FAFAFAFF;
+  }
+
+  .left-navigation .left-nav:hover{
+    cursor: pointer;
+    background-color: #F4F4F4FF
+  }
+
+  .left-nb .left{
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #FAFAFAFF;
+    color: black;
+  }
+
+  .left-nb .left:hover{
+    cursor: pointer;
+    background-color: #F4F4F4FF
+  }
+  .left-navigation .left-nav-footer{
+    margin-top: 3rem;
+    background-color: #FBFBFBFF;
+
+  }
+  .left-nav-footer-span > span{
+    color: #545454FF;
+  }
+  .left-nav-footer-span > span:hover{
+    color: #000;
+    cursor: pointer;
+  }
+  .center-navigation .center-nav{
+    height: 100px;
+  }
+  .center-navigation .main-content{
+    height: 500px;
+  }
+
+  .right-content .trends .inner{
+    background-color: white !important;
+    color: black !important;
+  }
+
+  .right-content .trends .inner > .card-body{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }

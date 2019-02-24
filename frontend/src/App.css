@@ -1,0 +1,147 @@
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 5vmin;
+}
+
+.App-log {
+  animation: App-logo-spin infinite 5s linear;
+  height: 5vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.woah{
+  cursor: pointer;
+}
+
+.hello{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;color: #EEEEECFF !important;
+}
+
+.hello:hover{
+  color: #BABDB6FF !important;
+}
+
+.header{
+  font-weight: bolder !important;
+}
+
+.ledum{
+  cursor: pointer;
+}
+img:hover{
+  box-shadow: 1px 2px 5px 1px  black;
+}
+.ledum{
+  box-shadow: 1px 1px 2px 1px  black;
+}
+
+
+.edit{
+  height: 500px !important;
+  box-shadow: 1px 2px 10px 1px black;
+  object-fit: cover;
+}
+
+.pado{
+  padding-top: 4rem;
+}
+
+.bg-blac{
+  background-color: black !important;
+  color: white !important;
+}
+
+.has-danger .form-control {
+    border-color: #ffcfcf;
+    color: #FF3636;
+    background-color: rgba(222, 222, 222, 0.1);
+}
+.has-none .form-control {
+    border-color: #73D216;
+}
+
+.carousel-inner{
+  height: 700px !important;
+}
+
+.about{
+  box-shadow: 1px 1px  4px 4px black;
+  padding: 10px;
+}
+
+.login{
+  background-image: url('./img/moon.jpg');
+  height:100vh !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dropzone{
+  border: 2px solid white;
+  padding: 10px;
+}
+
+.pytho{
+  font-size: 30px;
+  color: black;
+}
+.python{
+  font-size: 30px;
+  color: white;
+}
+.python > p > span{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.code{
+  box-shadow: 1px 2px 4px 1px black;
+}
+
+.badge:hover{
+  background-color: #729FCFFF !important;
+}
+
+.img-post{
+  height: 290px !important;
+  object-position: center;
+  object-fit: cover;
+}
+.nav-sm:hover{
+  cursor: pointer;
+
+}
+
