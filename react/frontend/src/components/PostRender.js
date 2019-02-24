@@ -18,7 +18,7 @@ const PostRender = ({ post, posts, togg, likes,auth }) => {
       })
 
       return (
-        <div className='col-md-6 py-2 col-lg-4' key={post.pk}>
+        <div className='col-md-6 py-2 col-lg-6' key={post.pk}>
           <div className='ledum' onClick={() => { history.push(`/posts/${post.pk}`) }}>
             <img className='img-post w-100' src={post.image} />
           </div>

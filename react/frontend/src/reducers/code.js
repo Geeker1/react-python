@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import { FETCH_POSTS, FETCH_POST, DELETE_POST, LIKE_POST, UPDATE, FETCH_POST_UPDATE } from '../actions/notes'
 
-export default function (state = {}, action) {
+export default function (state = {cod:null}, action) {
   switch (action.type) {
     case FETCH_POST_UPDATE:
       console.log({ ...state, [action.payload.data.pk]: action.payload.data })
@@ -24,7 +24,7 @@ export default function (state = {}, action) {
       }
       over.results = _.mapKeys(over.results, 'pk')
       console.log(_.merge(over, over))
-      return over
+      return _.assign(over,{...state.cod=false})
 
     case UPDATE:
       console.log(action.payload.data)

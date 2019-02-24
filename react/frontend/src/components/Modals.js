@@ -28,55 +28,25 @@ let Modal = () => {
               <div className='row pt-3'>
               <div className='col-sm-1'></div>
               <div className='col-sm-10 left-nb'>
-                <div className='card left' onClick={() => { this.props.history.push('/user/profile') }}>
-                  <div className='card-body row'>
-                  <div className='col-sm-2'>
-                    <img style={{ height: '50px', width: '50px' }} src={log} /></div>
-                    <div className='col-sm-10'>
-                    <div className='font-weight-bold align-middle pl-4'>
-                  Ibaakee Keaniabarido Ledum (Just a normal guy...)
-                    </div></div>
-                  </div>
+                <div className='bg-white rounded d-flex mt-2 text-dark justify-content-around font-weight-bold px-3 py-3'>
+                  <img src={log} style={{height:'50px',width:'50px'}} />
+                  <div className='px-2'><p className='font-weight-bold pt-2 align-middle'>Ibaakee Keaniabarido Ledum (Just a normal guy...)</p></div>
                 </div>
-                <div className='card left' onClick={() => { this.props.history.push('/user/profile') }}>
-                <div className='card-body row'>
-                  <div className='col-sm-2'>
-                    <img style={{ height: '50px', width: '50px' }} src={log} /></div>
-                    <div className='col-sm-10'>
-                    <div className='font-weight-bold align-middle pl-4'>
-                  Ojukwu Chibuzor (Javascript Developer and PWA Goddess)
-                    </div></div>
-                  </div>
+                <div className='bg-white rounded d-flex mt-2 text-dark justify-content-around font-weight-bold px-3 py-3'>
+                  <img src={log} style={{height:'50px',width:'50px'}} />
+                  <div className='px-2'><p className='font-weight-bold pt-2 align-middle'>Ojukwu Chibuzor (Javascript Developer and PWA Goddess)</p></div>
                 </div>
-                <div className='card left' onClick={() => { this.props.history.push('/user/profile') }}>
-                <div className='card-body row'>
-                  <div className='col-sm-2'>
-                    <img style={{ height: '50px', width: '50px' }} src={log} /></div>
-                    <div className='col-sm-10'>
-                    <div className='font-weight-bold align-middle pl-4'>
-                  Obinna Odirionye (Python and Devops Boss !!!)
-                    </div></div>
-                  </div>
+                <div className='bg-white rounded d-flex mt-2 text-dark justify-content-around font-weight-bold px-3 py-3'>
+                  <img src={log} style={{height:'50px',width:'50px'}} />
+                  <div className='px-2'><p className='font-weight-bold pt-2 align-middle'>Obinna Odirionye (Python and Devops Boss !!!)</p></div>
                 </div>
-                <div className='card left' onClick={() => { this.props.history.push('/user/profile') }}>
-                <div className='card-body row'>
-                  <div className='col-sm-2'>
-                    <img style={{ height: '50px', width: '50px' }} src={log} /></div>
-                    <div className='col-sm-10'>
-                    <div className='font-weight-bold align-middle pl-4'>
-                  Einstein Chibuzor(Nothing come out Developer)
-                    </div></div>
-                  </div>
+                <div className='bg-white rounded d-flex mt-2 text-dark justify-content-around font-weight-bold px-3 py-3'>
+                  <img src={log} style={{height:'50px',width:'50px'}} />
+                  <div className='px-2'><p className='font-weight-bold pt-2 align-middle'>Einstein Chibuzor(Nothing come out/Womanizing Developer)</p></div>
                 </div>
-                <div className='card left' onClick={() => { this.props.history.push('/user/profile') }}>
-                <div className='card-body row'>
-                  <div className='col-sm-2'>
-                    <img style={{ height: '50px', width: '50px' }} src={log} /></div>
-                    <div className='col-sm-10'>
-                    <div className='font-weight-bold align-middle pl-4'>
-                  Amadi Chibuike(Developer/Womanizer)
-                    </div></div>
-                  </div>
+                <div className='bg-white rounded d-flex mt-2 text-dark justify-content-around font-weight-bold px-3 py-3'>
+                  <img src={log} style={{height:'50px',width:'50px'}} />
+                  <div className='px-2'><p className='font-weight-bold pt-2 align-middle'>Chibuike(......Life is wicked)</p></div>
                 </div>
               </div>
                 
@@ -87,6 +57,7 @@ let Modal = () => {
         </div>
       </div>
     </div>
+    
     <div id='privacy' className='modal fade' tabindex='-1' role='dialog' aria-labelledby='exampleModalLiveLabel' aria-hidden='true'>
         <div className='modal-dialog' role='document'>
         <div className='modal-content'>

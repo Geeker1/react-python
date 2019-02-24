@@ -16,12 +16,41 @@ import Modal from './Modals.js'
 import $ from 'jquery'
 
 class HomeFeed extends Component {
+
+  constructor (props) {
+    super(props)
+  }
+
+  componentDidMount () {
+    this.props.fetchposts()
+  }
+
+  navigateright () {
+    this.props.fetchposts(this.props.posts.next)
+  }
+  navigateleft () {
+    this.props.fetchposts(this.props.posts.previous)
+  }
+
+
   render () {
+    console.log(this.props)
+    const { posts, toastManager } = this.props
+    const {posts:{cod}} = this.props
     return (
-      <main>
+      <main className='container-fluid'>
+      <div className='d-sm-block d-md-none mt-2'>
+      <div className='mt-2 w-100 d-flex'>
+  <div className='col-6 text-center py-2 text-white bg-danger nav-sm rounded border-right' onClick={()=>{this.props.history.push('/user/profile')}}>
+      Profile
+  </div>
+  <div className='col-6 bg-success py-2 text-white rounded nav-sm text-center border-left' onClick={()=>{$('#exampleModalLive').modal('toggle')}}>
+  Friends
+  </div>
+</div></div>
         <Modal />
-        <div className='d-flex py-4 justify-content-around'>
-          <div className='col-sm-3 left-navigation'>
+        <div className='row py-4 justify-content-around'>
+          <div className='col-sm-3 position-relative d-none d-lg-block left-navigation'>
             <div className='card bg-dark mb-2'>
               <div className='card-body font-weight-bold text-center text-white'>
               Ibaakee Ledum
@@ -32,11 +61,9 @@ class HomeFeed extends Component {
                 <img className='prof-img rounded' src={logor} />
               </div>
               <div className='row'>
-                <div className='card-body'>
                 Understanding me is the first step you should take
                  in achieving your goals, sorry Lorem Ipsum couldn't suffice,
                  #kingofjudah #maketheworldabetterplace
-                </div>
               </div>
               <div className='card left-nav' onClick={() => { this.props.history.push('/user/profile') }}>
                 <div className='card-body'>
@@ -88,10 +115,35 @@ class HomeFeed extends Component {
                 Juksayama Kyuito just went live ! <strong>5 mins ago...</strong>
                 </div>
               </div>
-              <div className='card mt-2 text-white bg-dark main-content' />
+              <div className='container mt-2 text-white bg-dark'>
+              {cod === null ? <img className='App-logo' src={logor} style={{width:'150px',height:'150px'}} />:<PostRender post={this.props} />}
+                
+                <div className='w-100 text-center'>
+          { posts.previous !== null
+            ? <button
+              className='btn btn-default px-3 my-4 rounded-0'
+              onClick={
+                () => {
+                  this.props.fetchposts(this.props.posts.previous)
+                }}>
+              Previous
+            </button>
+            : ''}
+          { posts.next !== null
+            ? <button
+              className='btn btn-primary px-3 my-4'
+              onClick={
+                () => {
+                  this.props.fetchposts(this.props.posts.next)
+                }}>
+              Next
+            </button>
+            : ''}
+            </div>
+              </div>
             </div>
           </div>
-          <div className='col-sm-3 right-content'>
+          <div className='col-sm-3 d-none d-lg-block right-content'>
             <div className='container'>
               <div className='card mt-2 text-white bg-dark'>
                 <div className='card-body'>
@@ -163,4 +215,18 @@ class HomeFeed extends Component {
   }
 }
 
-export default HomeFeed
+
+
+
+
+
+
+
+
+function mapStateToProps ({ posts, auth }) {
+  console.log(posts)
+  return { posts: posts, auth }
+}
+
+export default connect(mapStateToProps, { fetchposts, togg })(withToastManager(HomeFeed))
+

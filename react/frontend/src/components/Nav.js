@@ -43,11 +43,6 @@ const Nav = props => {
                 About Me
               </NavLink>
       </li>
-      <li className="nav-item">
-        <NavLink className='hello nav-link' to='/posts/'>
-                Posts
-              </NavLink>
-      </li>
       <li className="nav-item dropdown">
       { (!isAuthenticated & !token) || (!isAuthenticated || !token) ? ''
                 : <div className='d-inline'><a className="nav-link hello dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
