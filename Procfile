@@ -1,1 +1,1 @@
-web: gunicorn herodjang.wsgi
+web: gunicorn react.wsgi
